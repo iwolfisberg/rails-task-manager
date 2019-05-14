@@ -2,5 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  width: 700px;
+  width: 500px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  color: rgb(20, 20, 20);
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+  a:hover {
+    text-decoration: none;
+  }
 }

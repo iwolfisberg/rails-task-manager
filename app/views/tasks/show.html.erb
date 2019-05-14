@@ -1,4 +1,10 @@
-<h1><%= @task[:title] %></h1>
+<div class="d-flex justify-content-between align-items-start">
+  <h1><%= @task[:title] %></h1>
+  <%= link_to "Delete", task_path(@task.id), class:"btn btn-primary",
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+</div>
+
 <p><%= @task[:details] %></p>
 <p>
 <% if @task[:completed] == true %>
@@ -8,7 +14,5 @@
 <% end %>
 </p>
 <p><i class="fas fa-undo-alt"></i> <%= link_to "Back to list", tasks_path %></p>
-<p><%= link_to "Edit this task", edit_path %></p>
-<p><%= link_to "Delete", task_path(@task.id),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %></p>
+<p><%= link_to "Edit this task", edit_task_path %></p>
+
